@@ -1,15 +1,39 @@
-# SigmaOS-system-admin
+    # SigmaOS-system-admin
 
-Part of the SigmaOS multi-repository architecture.
+    System administration toolkit (services, disks, logs)
 
-## Principles
-- MODULARITY: Single responsibility per repository
-- LOOSE COUPLING: Minimal dependencies between repos
-- INTERFACE SEGREGATION: Clear, focused public APIs
-- DETERMINISTIC TESTING: Comprehensive test coverage
+    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
+    distribution modelled on Linux Mint and Omarchy Linux. See the parent
+    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
+    full component index.
 
-## License
-SPDX-License-Identifier: GPL-3.0-or-later
+    ## Upstream inspirations
+    - https://github.com/linuxmint/mintsysadm
 
-## Copyright
-Copyright (C) 2026 SigmaOS Project
+    ## Design principles applied
+    - **Pure Parsing**
+- **Fail-Fast**
+- **Least Astonishment**
+- **KISS**
+- **Deterministic Testing**
+
+    ## Usage
+    Verbs: `services, disks, logs, users, uptime-plan`
+
+    ```
+    $ sigma-sysadmin services --input systemctl.txt --state failed
+$ sigma-sysadmin disks --input df.txt --threshold 90
+$ sigma-sysadmin logs --input journal.txt --priority err --since 09:00
+$ sigma-sysadmin users --input passwd.txt --shadow shadow.txt
+$ sigma-sysadmin uptime-plan --reboot-required --pending-upgrades 12
+
+    ```
+
+    ## Build & test
+    ```
+    make build
+    make test
+    ```
+
+    ## Licence
+    GNU General Public License v3.0 (FOSS).
