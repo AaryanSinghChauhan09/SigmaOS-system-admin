@@ -1,17 +1,9 @@
 [package]
-name = "sigmaos-system-component"
+name = "sigmaos_system_admin"
 version = "0.1.0"
 edition = "2021"
-authors = ["SigmaOS Team"]
-license = "MIT OR Apache-2.0"
-description = "SigmaOS system component with sophisticated implementation"
+description = "Plain-text Unix administration toolset for user accounts, groups, file permissions, and timers"
 
-[dependencies]
-anyhow = "1.0"
-thiserror = "1.0"
-log = "0.4"
-env_logger = "0.10"
-serde = { version = "1.0", features = ["derive"] }
-toml = "0.8"
-
-[dev-dependencies]
+[lib]
+name = "sigmaos_system_admin"
+path = "src/lib.rs"

@@ -1,0 +1,16 @@
+[component]
+name = "SigmaOS-system-admin"
+tier = 2
+stability = "scaffold"
+language = "rust"
+description = "Plain-text Unix administration toolset for user accounts, groups, file permissions, and timers"
+upstream = ["https://github.com/shadow-maint/shadow"]
+
+[contract]
+provides = ["user-manager", "group-manager", "cron-timer-engine"]
+depends_on = []
+
+[maturity]
+status = "Scaffold"
+test_evidence = "Compiles and passes AAA unit tests"
+next_milestone = "Hardware and runtime integration"
