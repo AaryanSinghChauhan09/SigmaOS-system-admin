@@ -2,7 +2,8 @@
 name = "sigmaos_system_admin"
 version = "0.1.0"
 edition = "2021"
-description = "Plain-text Unix administration toolset for user accounts, groups, file permissions, and timers"
+license = "MIT"
+description = "SigmaOS system-admin component inspired by Linux Mint / Omarchy / Arch Linux."
 
 [lib]
 name = "sigmaos_system_admin"
