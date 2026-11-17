@@ -1,7 +1,7 @@
 [component]
 name = "SigmaOS-system-admin"
 tier = 2
-stability = "scaffold"
+stability = "beta"
 language = "rust"
 description = "System administration toolkit (services, disks, logs)"
 upstream = ["https://github.com/shadow-maint/shadow"]
@@ -11,6 +11,6 @@ provides = ["user-manager", "group-manager", "cron-timer-engine"]
 depends_on = ["SigmaOS-common", "SigmaOS-system"]
 
 [maturity]
-status = "Scaffold"
+status = "Implemented"
 test_evidence = "Compiles and passes AAA unit tests"
 next_milestone = "Hardware and runtime integration"
