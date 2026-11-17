@@ -3,12 +3,12 @@ name = "SigmaOS-system-admin"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "Plain-text Unix administration toolset for user accounts, groups, file permissions, and timers"
+description = "System administration toolkit (services, disks, logs)"
 upstream = ["https://github.com/shadow-maint/shadow"]
 
 [contract]
 provides = ["user-manager", "group-manager", "cron-timer-engine"]
-depends_on = []
+depends_on = ["SigmaOS-common", "SigmaOS-system"]
 
 [maturity]
 status = "Scaffold"
